@@ -23,6 +23,7 @@ public class SerchEngine extends HttpServlet {
 
         HttpSession session = request.getSession();
         session.setAttribute("a",a);
+        session.removeAttribute(a);
 
 
         response.sendRedirect("Result");
