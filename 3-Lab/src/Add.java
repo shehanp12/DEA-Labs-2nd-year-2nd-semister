@@ -17,9 +17,14 @@ public class Add extends HttpServlet {
         int j = Integer.parseInt(request.getParameter("second"));
 
         int k = i +j;
-        Cookie cookie1= new Cookie("s", j+"");
-        Cookie cookie = new Cookie("k", k+"");
-        cookie.setMaxAge(60);
+
+        Cookie cookie = new Cookie("s", j+"");
+        Cookie cookie1 = new Cookie("k", i+"");
+//        Cookie cookie1= new Cookie("s", j+"");
+//        Cookie cookie = new Cookie("k", k+"");
+//        cookie.setMaxAge(60);
+//        response.addCookie(cookie);
+//
         response.addCookie(cookie);
         response.addCookie(cookie1);
 
