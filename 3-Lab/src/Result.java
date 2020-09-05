@@ -13,6 +13,7 @@ public class Result extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         Cookie cookies[] = request.getCookies();
+        HttpSession session = request.getSession();
 
         for (Cookie c : cookies) {
             if (c.getName().equals("a")) {
@@ -21,12 +22,12 @@ public class Result extends HttpServlet {
 
             }
 
-//      String a= (String) session.getAttribute("a");
+  String a= (String) session.getAttribute("a");
 //
-//        try (PrintWriter printWriter = response.getWriter()) {
-//            printWriter.println(a);
-//
-//        }
+        try (PrintWriter printWriter = response.getWriter()) {
+            printWriter.println(a);
+
+        }
 
 
         }
