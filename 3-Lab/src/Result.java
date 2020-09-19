@@ -19,11 +19,9 @@ public class Result extends HttpServlet {
             if (c.getName().equals("a")) {
                 PrintWriter out = response.getWriter();
                 out.print("Name: " + c.getName() + " & Value: " + c.getValue());
-
             }
 
   String a= (String) session.getAttribute("a");
-//
         try (PrintWriter printWriter = response.getWriter()) {
             printWriter.println(a);
 
